@@ -1,0 +1,41 @@
+algoritmo "semnome"
+var
+rfh, rff, idade, cabelo: inteiro
+sexo, resp: caractere
+inicio
+      rfh <- 0
+      rff <- 0
+      Repita
+            EscrevaL
+            EscrevaL ("            CASTING           ")
+            EscrevaL ("------------------------------")
+            Escreva ("Homem ou Mulher? [M/F] : ")
+            Leia (sexo)
+            Escreva ("Idade: ")
+            Leia (idade)
+            EscrevaL ("Cor do cabelo: ")
+            EscrevaL ("[1] castanho")
+            EscrevaL ("[2] preto")
+            EscrevaL ("[3] branco")
+            EscrevaL ("[4] ruivo")
+            EscrevaL ("[5] loiro")
+            Leia (cabelo)
+            Se (cabelo = 1) e (sexo = "m") e (idade >= 18) entao
+               rfh <- rfh + 1
+            FimSe
+            Se (cabelo = 5) e (sexo = "f") e (idade >= 25) e (idade <= 35) entao
+               rff <- rff +1
+            FimSe
+            Escreva ("Acrescentar mais? [S/N] : ")
+            Leia (resp)
+            LimpaTela
+      Ate (resp = "n")
+      EscrevaL
+      EscrevaL ("---------------RESULTADO FINAL------------------")
+      EscrevaL
+      EscrevaL ("Homens com mais de 18 e cabelos castanhos são: ", rfh)
+      EscrevaL ("Mulheres entre 25 e 35 anos com cabelos loiros são: ", rff)
+      EscrevaL
+      EscrevaL ("------------------------------------------------")
+            
+fimalgoritmo
