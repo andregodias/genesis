@@ -1,0 +1,31 @@
+algoritmo "AumentoSalarioPorNumDependentes"
+var
+   salario, novosal : real
+   nome : caractere
+   dep : inteiro
+inicio
+      Escreva ("Nome do funcionário? ")
+      Leia (nome)
+      Escreva ("Salário? ")
+      Leia (salario)
+      Escreva ("Número de dependentes? ")
+      Leia (dep)
+      Escolha dep
+              Caso 0
+                   novosal <- salario * 1.03
+                   EscrevaL (nome, " receberá um aumento de 3%.")
+                   EscrevaL ("Se novo salário será de R$", novosal:7:2, ".")
+              Caso 1, 2, 3
+                   novosal <- salario * 1.1
+                   EscrevaL (nome, " receberá um aumento de 10%.")
+                   EscrevaL ("Seu novo salário será de R$", novosal:7:2, ".")
+              Caso 4, 5, 6
+                   novosal <- salario * 1.15
+                   EscrevaL (nome, " receberá um aumento de 15%.")
+                   EscrevaL ("Seu novo salário será de R$", novosal:7:2, ".")
+              OutroCaso
+                    novosal <- salario * 1.18
+                    EscrevaL (nome, " receberá um aumento de 18%.")
+                    EscrevaL ("Seu novo salário será de R$", novosal:7:2, ".")
+      FimEscolha
+fimalgoritmo
