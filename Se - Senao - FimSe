@@ -1,0 +1,46 @@
+algoritmo "AproveitamentoDaNota"
+var
+//nome aqui é apenas para encher linguiça. Poderá ser realmente utilizado
+//em programas futuros.
+   nome : caractere
+   nota : inteiro
+inicio
+      Escreva ("Nome do aluno: ")
+      Leia (nome)
+      EScreva ("Nota do aluno: ")
+      Leia (nota)
+      Se (nota >=9) entao
+         EscrevaL ("---------------------------")
+         EscrevaL ("Aluno APROVADO.")
+         EscrevaL ("Aproveitamento: A")
+      senao
+           Se (nota < 9 ) e (nota >= 7) entao
+              EscrevaL ("----------------------")
+              EscrevaL ("Aluno APROVADO.")
+              EscrevaL ("Aproveitamento: B")
+
+           senao
+                Se (nota < 7) e (nota >= 5) entao
+                   EscrevaL ("-----------------------")
+                   EscrevaL ("Aluno em RECUPERAÇÃO.")
+                   EscrevaL ("Aproveitamento: C")
+                senao
+                     Se (nota < 5) e (nota >= 3) entao
+                        EscrevaL ("---------------------")
+                        EscrevaL ("Aluno REPROVADO.")
+                        EscrevaL ("Aproveitamento: D")
+                     senao
+                          Se (nota < 3) e (nota >= 1) entao
+                             EscrevaL ("---------------------------")
+                             EscrevaL ("Aluno REPROVADO.")
+                             EscrevaL ("Aproveitamento: E")
+                          senao
+                             EscrevaL ("---------------------------")
+                             EscrevaL ("Aluno REPROVADO.")
+                             EscrevaL ("Apriveitamento: F")
+                          FimSe
+                     FimSe
+                FimSe
+           FimSE
+      FimSe
+fimalgoritmo
